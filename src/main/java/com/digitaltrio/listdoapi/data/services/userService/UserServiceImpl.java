@@ -1,10 +1,12 @@
 package com.digitaltrio.listdoapi.data.services.userService;
 
+import com.digitaltrio.listdoapi.Constants;
 import com.digitaltrio.listdoapi.data.repositories.UserRepository;
 import com.digitaltrio.listdoapi.domain.entities.User;
 import com.digitaltrio.listdoapi.domain.requests.NewUserRequest;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,7 +28,9 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User createUser(NewUserRequest userRequest) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(Constants.encodeStrength);
         User user = new User(userRequest);
+        user.setPassword(encoder.encode(userRequest.getPassword()));
         userRepository.save(user);
         return user;
     }
