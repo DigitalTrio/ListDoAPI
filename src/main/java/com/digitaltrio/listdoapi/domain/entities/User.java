@@ -1,10 +1,9 @@
 package com.digitaltrio.listdoapi.domain.entities;
 
-import com.digitaltrio.listdoapi.domain.requests.NewUserRequest;
+import com.digitaltrio.listdoapi.domain.requests.user.NewUserRequest;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;

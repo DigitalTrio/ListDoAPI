@@ -1,7 +1,7 @@
 package com.digitaltrio.listdoapi.data.services.userListService;
 
 import com.digitaltrio.listdoapi.domain.entities.UserList;
-import com.digitaltrio.listdoapi.domain.requests.NewUserRequest;
+import com.digitaltrio.listdoapi.domain.requests.user.NewUserRequest;
 import jakarta.persistence.EntityNotFoundException;
 
 import java.util.List;

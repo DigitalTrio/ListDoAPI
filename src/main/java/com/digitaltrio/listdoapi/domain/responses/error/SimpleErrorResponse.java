@@ -5,11 +5,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;
 
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class NotFoundResponse extends APIResponse {
-    private static final int statusCode = HttpStatus.NOT_FOUND.value();
-    public NotFoundResponse(String message) {
+public class SimpleErrorResponse extends APIResponse {
+    private static final int statusCode = HttpStatus.CONFLICT.value();
+
+    public SimpleErrorResponse(String message) {
         super(statusCode, message);
     }
 }

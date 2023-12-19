@@ -1,9 +1,10 @@
 package com.digitaltrio.listdoapi.data.services.userService;
 
 import com.digitaltrio.listdoapi.Constants;
+import com.digitaltrio.listdoapi.data.exceptions.EmailNotAvailableException;
 import com.digitaltrio.listdoapi.data.repositories.UserRepository;
 import com.digitaltrio.listdoapi.domain.entities.User;
-import com.digitaltrio.listdoapi.domain.requests.NewUserRequest;
+import com.digitaltrio.listdoapi.domain.requests.user.NewUserRequest;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -27,7 +28,10 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User createUser(NewUserRequest userRequest) {
+    public User createUser(NewUserRequest userRequest) throws EmailNotAvailableException {
+        if(!checkForEmailAvailability(userRequest.getEmail())) {
+            throw new EmailNotAvailableException("Email is already taken");
+        }
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(Constants.encodeStrength);
         User user = new User(userRequest);
         user.setPassword(encoder.encode(userRequest.getPassword()));
@@ -48,5 +52,15 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public User getUserByEmail(String email) throws EntityNotFoundException {
+        return userRepository.findUserByEmail(email).orElseThrow(() -> new EntityNotFoundException("Couldn't find User with email: " + email));
+    }
+
+    @Override
+    public Boolean checkForEmailAvailability(String email) {
+        return !(userRepository.existsByEmail(email));
     }
 }

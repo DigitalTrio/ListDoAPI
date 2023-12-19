@@ -1,8 +1,7 @@
 package com.digitaltrio.listdoapi.domain.entities;
 
-import com.digitaltrio.listdoapi.domain.requests.NewUserListRequest;
+import com.digitaltrio.listdoapi.domain.requests.user.NewUserListRequest;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
