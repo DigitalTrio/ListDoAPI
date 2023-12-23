@@ -1,6 +1,6 @@
 package com.digitaltrio.listdoapi.domain.entities;
 
-import com.digitaltrio.listdoapi.domain.requests.user.NewUserRequest;
+import com.digitaltrio.listdoapi.data.requests.user.NewUserRequest;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -4,7 +4,7 @@ import com.digitaltrio.listdoapi.Constants;
 import com.digitaltrio.listdoapi.data.exceptions.EmailNotAvailableException;
 import com.digitaltrio.listdoapi.data.repositories.UserRepository;
 import com.digitaltrio.listdoapi.domain.entities.User;
-import com.digitaltrio.listdoapi.domain.requests.user.NewUserRequest;
+import com.digitaltrio.listdoapi.data.requests.user.NewUserRequest;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

@@ -1,4 +1,4 @@
-package com.digitaltrio.listdoapi.domain.responses.error;
+package com.digitaltrio.listdoapi.data.responses.error;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

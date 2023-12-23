@@ -1,6 +1,6 @@
-package com.digitaltrio.listdoapi.domain.responses.error;
+package com.digitaltrio.listdoapi.data.responses.error;
 
-import com.digitaltrio.listdoapi.domain.responses.APIResponse;
+import com.digitaltrio.listdoapi.data.responses.APIResponse;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;

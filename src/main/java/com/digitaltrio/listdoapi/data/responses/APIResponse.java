@@ -1,4 +1,4 @@
-package com.digitaltrio.listdoapi.domain.responses;
+package com.digitaltrio.listdoapi.data.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

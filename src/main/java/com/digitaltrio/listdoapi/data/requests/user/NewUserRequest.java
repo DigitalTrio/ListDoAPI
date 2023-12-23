@@ -1,4 +1,4 @@
-package com.digitaltrio.listdoapi.domain.requests.user;
+package com.digitaltrio.listdoapi.data.requests.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.digitaltrio.listdoapi.domain.requests.authentication;
+package com.digitaltrio.listdoapi.data.requests.authentication;
 
 import lombok.Data;
 

@@ -2,12 +2,10 @@ package com.digitaltrio.listdoapi.domain.controller;
 
 import com.digitaltrio.listdoapi.Constants;
 import com.digitaltrio.listdoapi.data.annotations.CheckForEmptyValues;
-import com.digitaltrio.listdoapi.data.services.authenticationService.AuthenticationService;
 import com.digitaltrio.listdoapi.data.services.authenticationService.AuthenticationServiceImpl;
 import com.digitaltrio.listdoapi.domain.entities.User;
-import com.digitaltrio.listdoapi.domain.requests.authentication.AuthenticateUserRequest;
-import com.digitaltrio.listdoapi.domain.responses.user.UserResponse;
-import jakarta.persistence.EntityNotFoundException;
+import com.digitaltrio.listdoapi.data.requests.authentication.AuthenticateUserRequest;
+import com.digitaltrio.listdoapi.data.responses.user.UserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

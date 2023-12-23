@@ -1,7 +1,7 @@
-package com.digitaltrio.listdoapi.domain.responses.user;
+package com.digitaltrio.listdoapi.data.responses.user;
 
 import com.digitaltrio.listdoapi.domain.entities.User;
-import com.digitaltrio.listdoapi.domain.responses.APIResponse;
+import com.digitaltrio.listdoapi.data.responses.APIResponse;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;

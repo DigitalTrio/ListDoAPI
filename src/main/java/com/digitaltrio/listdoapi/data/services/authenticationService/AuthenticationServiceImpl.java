@@ -4,7 +4,7 @@ import com.digitaltrio.listdoapi.Constants;
 import com.digitaltrio.listdoapi.data.exceptions.FalsePasswordException;
 import com.digitaltrio.listdoapi.data.services.userService.UserServiceImpl;
 import com.digitaltrio.listdoapi.domain.entities.User;
-import com.digitaltrio.listdoapi.domain.requests.authentication.AuthenticateUserRequest;
+import com.digitaltrio.listdoapi.data.requests.authentication.AuthenticateUserRequest;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
