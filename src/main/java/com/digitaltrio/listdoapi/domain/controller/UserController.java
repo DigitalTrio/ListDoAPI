@@ -48,7 +48,7 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUser(@PathVariable String id) {
         User user = userService.getUser(id);
-        logger.info("Returned User");
+        logger.info("Returned User:" + id);
         return ResponseEntity.status(HttpStatus.OK).body(new UserResponse(user));
 
     }

@@ -14,4 +14,5 @@ public interface UserService {
     List<User> getAllUsers();
     User getUserByEmail(String email) throws EntityNotFoundException;
     Boolean checkForEmailAvailability(String email);
+    boolean userExists(String id);
 }

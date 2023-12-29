@@ -17,13 +17,13 @@ public class UserList {
     @Id
     private String id;
     private String listName;
-    @CreatedDate
     private LocalDateTime created_at;
-    private String owner_id;
+    private String ownerID;
     List<User> members;
 
     public UserList(NewUserListRequest newUserListRequest) {
         this.listName = newUserListRequest.getListName();
-        this.owner_id = newUserListRequest.getOwnerID();
+        this.ownerID = newUserListRequest.getOwnerID();
+        this.created_at = LocalDateTime.now();
     }
 }

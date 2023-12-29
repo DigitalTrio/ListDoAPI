@@ -13,7 +13,6 @@ import java.util.List;
 @Data
 public class BadRequestErrorResponse extends APIResponse {
     private final static int statusCode = HttpStatus.BAD_REQUEST.value();
-    LocalDateTime timestamp = LocalDateTime.now();
     private final static String message = "One or more Values are missing!";
     List<String> missingArgs = new ArrayList<>();
 

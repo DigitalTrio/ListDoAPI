@@ -41,12 +41,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void deleteUser(String id) throws EntityNotFoundException {
-        try {
-            getUser(id);
-            userRepository.deleteById(id);
-        } catch (EntityNotFoundException e) {
-            throw new EntityNotFoundException(e.getMessage());
-        }
+        getUser(id);
+        userRepository.deleteById(id);
     }
 
     @Override
@@ -62,5 +58,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public Boolean checkForEmailAvailability(String email) {
         return !(userRepository.existsByEmail(email));
+    }
+
+    @Override
+    public boolean userExists(String id) {
+        return userRepository.findById(id).isPresent();
     }
 }
